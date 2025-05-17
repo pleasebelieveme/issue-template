@@ -15,7 +15,7 @@ body:
   label: ✅ 작업할 항목 (Todo)
   description: 해야 할 일을 체크리스트 형태로 작성해 주세요.
   placeholder: |
-  - [ ] A 문서 수정
-  - [ ] B 문서 추가
+    - [ ] A 문서 수정
+    - [ ] B 문서 추가
   validations:
   required: true
