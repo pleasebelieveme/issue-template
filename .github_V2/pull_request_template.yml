@@ -1,0 +1,69 @@
+name: "📝 Pull Request"
+description: "PR 생성 시 작성해야 할 템플릿입니다."
+title: "[PR] 제목을 입력해주세요"
+labels: []
+body:
+- type: input
+  id: issue
+  attributes:
+  label: 🔗 Issue 번호
+  description: 연결된 이슈 번호를 입력하세요 (예: close #1)
+  placeholder: "close #"
+  validations:
+  required: true
+
+- type: textarea
+  id: work
+  attributes:
+  label: 🛠 작업 내역
+  description: 이번 PR에서 수행한 작업 내용을 적어주세요.
+  placeholder: |
+  - 작업 내용 1
+  - 작업 내용 2
+  validations:
+  required: false
+
+- type: textarea
+  id: change
+  attributes:
+  label: 🔄 변경 사항
+  description: 코드에 어떤 변경이 있었는지 작성해주세요.
+  placeholder: |
+  - 변경사항 1
+  - 변경사항 2
+  validations:
+  required: false
+
+- type: textarea
+  id: feature
+  attributes:
+  label: ✨ 새로운 기능
+  description: 새롭게 추가된 기능이 있다면 적어주세요.
+  placeholder: |
+  - 새로운 기능 1
+  - 새로운 기능 2
+  validations:
+  required: false
+
+- type: checkboxes
+  id: type
+  attributes:
+  label: 📦 작업 유형
+  options:
+  - label: 신규 기능 추가
+  - label: 버그 수정
+  - label: 리팩토링
+  - label: 문서 업데이트
+  validations:
+  required: true
+
+- type: checkboxes
+  id: checklist
+  attributes:
+  label: ✅ 체크리스트
+  options:
+  - label: Merge 대상 branch가 올바른가?
+  - label: 약속된 컨벤션 (on code, commit, issue...) 을 준수하는가?
+  - label: PR과 관련없는 변경사항이 없는가?
+  validations:
+  required: true
